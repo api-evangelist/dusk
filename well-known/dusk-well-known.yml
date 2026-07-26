@@ -1,0 +1,26 @@
+generated: '2026-07-18'
+method: searched
+source: live probe of /.well-known/* on dusk.app and docs.dusk.app
+hosts:
+- host: https://docs.dusk.app
+  documents:
+  - path: /.well-known/security.txt   # RFC 9116
+    status: 200
+    file: dusk-security.txt
+- host: https://dusk.app
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    note: SPA HTML fallback (content-type text/html), not a real security.txt
+  - path: /.well-known/openid-configuration
+    status: 200
+    note: SPA HTML fallback, not a real OIDC discovery document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    note: SPA HTML fallback, not a real RFC 8414 document
+  - path: /.well-known/api-catalog
+    status: 200
+    note: SPA HTML fallback, not a real API catalog
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    note: SPA HTML fallback, not a real ai-plugin manifest

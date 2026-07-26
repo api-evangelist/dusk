@@ -1,7 +1,22 @@
 aid: dusk
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dusk.png
 name: Dusk
-description: Dusk is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Dusk (dusk.app), tagline "Make the night," is a consumer mobile app backed by 500 Global.
+  It publishes product documentation on a Notion-hosted docs site (docs.dusk.app) and maintains an RFC 9116
+  security.txt pointing to a public Responsible Disclosure Policy. Dusk was surfaced as a 500 Global portfolio
+  company and added to the API Evangelist network; it exposes no public developer API, OpenAPI, or SDK surface
+  at this time, so this profile captures its verifiable web, documentation, and security posture.
 url: https://raw.githubusercontent.com/api-evangelist/dusk/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +26,13 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- Consumer
+- Mobile App
+- Social
+- Nightlife
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +40,22 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/dusk-domain-security.yml
 - type: Website
   url: https://dusk.app
+- type: Documentation
+  url: https://docs.dusk.app
+- type: WellKnown
+  url: well-known/dusk-well-known.yml
+- type: SecurityTxt
+  url: well-known/dusk-security.txt
+- type: VulnerabilityDisclosure
+  url: security/dusk-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.notion.so/Responsible-Disclosure-Policy-5f18bb6b86804eaf989c006131778b9c
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
